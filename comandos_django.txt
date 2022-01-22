@@ -1,8 +1,0 @@
-lista de los comandos de django
-django-admin startproject <nombre> crea un nuevo proyecto con ese nombre en la ubicacion que estamos en la terminal
-python manage.py runserver > levanta al servidor de nuestro proyecto en django
-python manage.py migrate > ejecuta todas las migraciones que aun no se han realizado en la base de datos
-python manage.py showmigrations > lista todas las migraciones que hay en el proyecto y mediante [x] indica si la migracion ya se realizo en la bd
-python manage.py makemigrations > generara la migracion en base a los cambios realizados para que se vean reflejados en la bd
-
-

@@ -4,3 +4,5 @@ entorno_flask/
 entorno_django
 
 .env
+__pycache__
+node_modules/
