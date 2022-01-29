@@ -21,7 +21,7 @@ export class AuthServise {
         { expiresIn: "120" }
       );
       //se puede pasar un valor numerico (que pueden ser segundos) o un string indicando el formato de la siguiente manera "7d" (7 dias) "10h" (10 horas) 2days (2 días) si le ponemos "100" encontes sera un valor expresado en milisegundos. Para poner 1 minuto, se pone "60" si se quiere 2 minutos se pondra "120"
-      return { message: "Sí es el usuario" };
+      return { message: "Sí es el usuario", token };
     } else {
       return { message: "Credenciales incorrectas" };
     }
