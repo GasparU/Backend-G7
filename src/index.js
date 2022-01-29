@@ -1,7 +1,17 @@
-import express from "express";
+import express, { json } from "express";
+import morgan from "morgan";
+import { authRouter } from "./routes/auth.routes.js";
 
 const app = express();
-console.log(process.env.PORT);
+
+app.use(morgan("dev"));
+app.use(json());
+
+// defino mis rutas
+app.use(authRouter);
+// fin de la definicion
+
+// console.log(process.env.PORT);
 const PORT = process.env.PORT ?? 3000;
 
 app.listen(PORT, () => {

@@ -1,16 +1,21 @@
-import { getMaxListeners } from "process";
+import { hashSync } from "bcrypt";
 
 export default async (prisma) => {
-  await prisma.user.upsert({
+  const password = hashSync("Welcome123!", 10);
+
+  await prisma.usuario.upsert({
     create: {
       nombre: "Jose",
-      correo: "sainc2016@getMaxListeners.com",
-      password: "123456",
-      tipoUsuario: "ADMIN",
+      correo: "sainc2016@gmail.com",
+      password,
+      TipoUsuario: "ADMIN",
     },
-    update: {},
+    update: {
+      password,
+    },
     where: {
-      correo: "sainc2016@getMaxListeners.com",
+      // solamente se pueden declarar las columnas que sean unicas (unique) o las pk
+      correo: "sainc2016@gmail.com",
     },
   });
 };
