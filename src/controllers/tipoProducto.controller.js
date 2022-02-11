@@ -1,9 +1,9 @@
 import { tipoProductoService } from "../services/tipoProducto.service.js";
 
 export async function crearTipoProducto(req, res) {
-  tipoProductoService.crearTipoProducto({
+  const resultado = await tipoProductoService.crearTipoProducto({
     nombreProducto: "",
-    usuarioId: "",
+    usuarioId: 1,
   });
-  return res.json(resultado);
+  return res.status(201).json(resultado);
 }
