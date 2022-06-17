@@ -1,0 +1,2 @@
+curso = "backend"
+print(curso)
